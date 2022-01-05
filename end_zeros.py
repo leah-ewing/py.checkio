@@ -18,6 +18,12 @@ Output: An Int.
 >>> end_zeros(101)
 0
 
+>>> end_zeros(245)
+0
+
+>>> end_zeros(100100)
+2
+
 """
 
 
