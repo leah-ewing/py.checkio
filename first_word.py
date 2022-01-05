@@ -15,6 +15,12 @@ Precondition: The text can contain a-z, A-Z and spaces.
 >>> first_word("Hello World")
 Hello
 
+>>> first_word("a word")
+a
+
+>>> first_word("hi")
+hi
+
 """
 
 
@@ -22,8 +28,9 @@ def first_word(text):
 
     text_list = text.split(" ")
     answer = text_list[0]
-
+    
     print(answer)
+
 
 
 
