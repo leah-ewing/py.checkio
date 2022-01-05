@@ -15,6 +15,9 @@ False
 >>> is_acceptable_password('muchlonger')
 True
 
+>>> is_acceptable_password('ashort')
+False
+
 """
 
 def is_acceptable_password(password):
