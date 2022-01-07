@@ -41,11 +41,6 @@ def checkio(array):
     print(answer)
 
 
-# checkio([0, 1, 2, 3, 4, 5]) # => 30
-# checkio([1, 3, 5]) # => 30
-# checkio([6]) # => 36
-# checkio([]) # => 0
-
 
 if __name__ == '__main__':
     import doctest
