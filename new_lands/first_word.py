@@ -39,9 +39,7 @@ Hello
 
 def first_word(text):
 
-    text_list = text.rstrip('., ')
-    text_list = text_list.strip('., ')
-    text_list = text_list.split(' ')
+    text_list = text.rstrip('., ').strip(',. ').split(' ')
 
     if '.' in text_list[0] or ',' in text_list[0]:
         if '.' in text_list[0]:
