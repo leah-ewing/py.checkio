@@ -2,8 +2,8 @@
 
 Count the number of digits in a given string.
 
-Input: A Str.
-Output: An Int.
+Input: A string
+Output: An integer
 
 
 >>> count_digits('hi')
