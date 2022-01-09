@@ -19,8 +19,11 @@ Precondition: Dates between 1 January 1 and 31 December 9999. Dates are correct.
 >>> days_diff((2014, 8, 27), (2014, 1, 1))
 238
 
-days_diff([1,1,1],[9999,12,31])
+>>> days_diff([1,1,1],[9999,12,31])
 3652058
+
+>>> days_diff([2014,2,28],[2014,2,28])
+0
 
 """
 
@@ -65,9 +68,17 @@ def days_diff(a, b):
         difference = difference[1:]
 
     difference = difference.split(' ')
-    answer = int(difference[0])
+
+    if len(difference) == 1:
+        answer = 0
+    else:
+        answer = int(difference[0])
 
     print(answer)
+
+# days_diff([2014,2,28],[2014,2,28])
+# days_diff([1,1,1],[9999,12,31])
+
 
 
 
