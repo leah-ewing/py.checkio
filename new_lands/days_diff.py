@@ -76,10 +76,6 @@ def days_diff(a, b):
 
     print(answer)
 
-# days_diff([2014,2,28],[2014,2,28])
-# days_diff([1,1,1],[9999,12,31])
-
-
 
 
 if __name__ == '__main__':
