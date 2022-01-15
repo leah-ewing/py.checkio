@@ -29,10 +29,9 @@ Precondition: 0 < len(data) < 1000
 
 
 def checkio(data):
-    
+
     data_list = list(data)
     duplicate_nums = []
-    unique_nums = []
     i = 0
 
 
