@@ -31,7 +31,6 @@ def popular_words(text, words):
             if word == words[i]:
                 word_count += 1
 
-
         popular[words[i]] = word_count 
 
         i += 1
