@@ -1,11 +1,9 @@
 """
 
-You should return a given string in reverse order.
+Return a given string in reverse order.
 
 Input: A string.
-
 Output: A string.
-
 
 >>> backward_string('val')
 lav
