@@ -1,8 +1,6 @@
 """ 
 
-You have a string that consist only of digits. 
-
-You need to find how many zero digits ("0") are at the beginning of the given string.
+Given a string that consists of only digits, find how many zero digits ("0") are at the beginning of the given string.
 
 Input: A string, that consist of digits
 Output: An Int

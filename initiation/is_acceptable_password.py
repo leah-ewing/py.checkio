@@ -5,8 +5,8 @@ Create a password verification function.
 The verification condition is:
 
 the length should be bigger than 6.
-Input: A string.
 
+Input: A string.
 Output: A bool.
 
 >>> is_acceptable_password('short')

@@ -1,9 +1,8 @@
 """
 
-You have a positive integer. Try to find out how many digits it has?
+Given a positive integer, return how many digits it has.
 
 Input: A positive Int
-
 Output: An Int.
 
 >>> number_length(10)
