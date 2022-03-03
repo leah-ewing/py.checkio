@@ -13,6 +13,12 @@ Output: Iterable
 >>> frequency_sort(['bob', 'bob', 'carl', 'alex', 'bob'])
 ['bob', 'bob', 'bob', 'carl', 'alex']
 
+>>> frequency_sort([17, 99, 42])
+[17, 99, 42]
+
+>>> frequency_sort([1, 2, 2, 1])
+[1, 1, 2, 2]
+
 >>> frequency_sort([])
 []
 
@@ -27,10 +33,22 @@ def frequency_sort(items):
     word_counts = []
     word_list = []
 
-    if sorted(items) == sorted(list(set(items))):
+    # print(items)
+    # print(set(items))
+
+    # print(f"items = {items}")
+    # print(f"set(items) = {set(items)}")
+    # print(f"sorted(items) = {sorted(items)}")
+    # print(f"sorted(set(items)) = {sorted(set(items))}")
+    # print("\n")
+
+    # print(sorted(items))
+    # print(sorted(list(set(items)))[::-1])
+
+    if sorted(items) == sorted((set(items))):
         print(items)
-        
     else:
+        # print('test3')
         i = 0
         while len(items_list) > 1:
             word_counts.append(1)
@@ -54,14 +72,18 @@ def frequency_sort(items):
         word_counts = sorted(word_counts)
         sorted_words_and_counts = []
 
+
         i = 0
         while i < len(word_counts):
             for item in words_and_counts:
                 if item[1][0] == word_counts[i] and item not in sorted_words_and_counts:
-                    sorted_words_and_counts.insert(0, item)
+                    # sorted_words_and_counts.insert(0, item)
+                    sorted_words_and_counts.append(item)
             i += 1
 
         new_list = []
+
+
 
         i = 0
         while i < len(sorted_words_and_counts):
@@ -70,9 +92,22 @@ def frequency_sort(items):
                     new_list.append(item)
             i += 1
 
-        print(new_list)
+        if new_list[0] == items[0]:
+            print(new_list)
+        else:
+            print(new_list[::-1])
 
+        # print(f"new_list = {new_list}")
 
+    # print("\n")
+    # print(f"word_counts = {word_counts}")
+    # print(f"words_and_counts = {words_and_counts}")
+    # print(f"sorted_words_and_counts = {sorted_words_and_counts}")
+    # print(f"items = {items}")
+
+# frequency_sort([1, 2, 2, 1]) # == [1, 1, 2, 2]
+# frequency_sort(['bob', 'bob', 'carl', 'alex', 'bob'])
+# frequency_sort([17, 99, 42])
 
 if __name__ == '__main__':
     import doctest
