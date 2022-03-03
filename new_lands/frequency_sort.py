@@ -33,22 +33,9 @@ def frequency_sort(items):
     word_counts = []
     word_list = []
 
-    # print(items)
-    # print(set(items))
-
-    # print(f"items = {items}")
-    # print(f"set(items) = {set(items)}")
-    # print(f"sorted(items) = {sorted(items)}")
-    # print(f"sorted(set(items)) = {sorted(set(items))}")
-    # print("\n")
-
-    # print(sorted(items))
-    # print(sorted(list(set(items)))[::-1])
-
     if sorted(items) == sorted((set(items))):
         print(items)
     else:
-        # print('test3')
         i = 0
         while len(items_list) > 1:
             word_counts.append(1)
@@ -72,18 +59,14 @@ def frequency_sort(items):
         word_counts = sorted(word_counts)
         sorted_words_and_counts = []
 
-
         i = 0
         while i < len(word_counts):
             for item in words_and_counts:
                 if item[1][0] == word_counts[i] and item not in sorted_words_and_counts:
-                    # sorted_words_and_counts.insert(0, item)
                     sorted_words_and_counts.append(item)
             i += 1
 
         new_list = []
-
-
 
         i = 0
         while i < len(sorted_words_and_counts):
@@ -97,17 +80,7 @@ def frequency_sort(items):
         else:
             print(new_list[::-1])
 
-        # print(f"new_list = {new_list}")
 
-    # print("\n")
-    # print(f"word_counts = {word_counts}")
-    # print(f"words_and_counts = {words_and_counts}")
-    # print(f"sorted_words_and_counts = {sorted_words_and_counts}")
-    # print(f"items = {items}")
-
-# frequency_sort([1, 2, 2, 1]) # == [1, 1, 2, 2]
-# frequency_sort(['bob', 'bob', 'carl', 'alex', 'bob'])
-# frequency_sort([17, 99, 42])
 
 if __name__ == '__main__':
     import doctest
