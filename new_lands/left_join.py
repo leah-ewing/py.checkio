@@ -16,7 +16,7 @@ Precondition: 0 < len(phrases) < 42
 >>> left_join(("bright aright", "ok"))
 'bleft aleft,ok'
 
->>> left_join(("brightness wright",))
+>>> left_join(("brightness wright"))
 'bleftness wleft'
 
 >>> left_join(("enough", "jokes"))

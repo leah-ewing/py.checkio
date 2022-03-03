@@ -12,9 +12,9 @@ Output: An integer
 >>> count_digits('who is 1st here')
 1
 
->>> count_digits('my numbers is 2')
+>>> count_digits('my number is 2')
 1
->>> count_digits('This picture is an oil on canvas painting by Danish artist Anna Petersen between 1845 and 1910 year')
+>>> count_digits('This picture is an oil on canvas painting by Danish artist Anna Petersen between years 1845 and 1910')
 8
 
 >>> count_digits('5 plus 6 is')
