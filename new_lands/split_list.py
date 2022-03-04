@@ -11,6 +11,9 @@ If it has no elements, then two empty arrays should be returned.
 >>> split_list([1, 2, 3])
 [[1, 2], [3]]
 
+>>> split_list([])
+([], [])
+
 
 """
 
@@ -18,6 +21,7 @@ def split_list(items):
 
     if len(items) == 0:
         print([[], []])
+        
     else:
         new_list = []
         
@@ -26,6 +30,7 @@ def split_list(items):
             last_half = items[int(len(items) / 2):]
             new_list.append(first_half)
             new_list.append(last_half)
+
         else:
             first_half = items[:int(len(items) / 2) + 1]
             last_half = items[int(len(items) / 2 + 1):]
@@ -34,7 +39,6 @@ def split_list(items):
             
 
         print(new_list)
-        
 
 
 if __name__ == '__main__':
