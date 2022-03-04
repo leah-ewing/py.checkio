@@ -20,48 +20,39 @@ def date_time(time):
     
     time = time.split('.')
     day = int(time.pop(0))
-    month = time.pop(0)
+    month = int(time.pop(0))
     
     time = time[0].split(' ')
-    year = time.pop(0)
+    year = int(time.pop(0))
     
     time = time[0].split(':')
     hour = int(time[0])
     minute = int(time[1])
 
     
-    if month == '01':
+    if month == 1:
         month_written = 'January'
-        month = month[1:]
-    elif month == '02':
+    elif month == 2:
         month_written = 'February'
-        month = month[1:]
-    elif month == '03':
+    elif month == 3:
         month_written = 'March'
-        month = month[1:]
-    elif month == '04':
+    elif month == 4:
         month_written = 'April'
-        month = month[1:]
-    elif month == '05':
+    elif month == 5:
         month_written = 'May'
-        month = month[1:]
-    elif month == '06':
+    elif month == 6:
         month_written = 'June'
-        month = month[1:]
-    elif month == '07':
+    elif month == 7:
         month_written = 'July'
-        month = month[1:]
-    elif month == '08':
+    elif month == 8:
         month_written = 'August'
-        month = month[1:]
-    elif month == '09':
+    elif month == 9:
         month_written = 'September'
-        month = month[1:]
-    elif month == '10':
+    elif month == 10:
         month_written = 'October'
-    elif month == '11':
+    elif month == 11:
         month_written = 'November'
-    elif month == '12':
+    elif month == 12:
         month_written = 'December'
         
     if minute == 1:
