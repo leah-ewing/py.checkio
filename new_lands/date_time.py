@@ -31,29 +31,29 @@ def date_time(time):
 
     
     if month == 1:
-        month_written = 'January'
+        month = 'January'
     elif month == 2:
-        month_written = 'February'
+        month = 'February'
     elif month == 3:
-        month_written = 'March'
+        month = 'March'
     elif month == 4:
-        month_written = 'April'
+        monthn = 'April'
     elif month == 5:
-        month_written = 'May'
+        month = 'May'
     elif month == 6:
-        month_written = 'June'
+        month = 'June'
     elif month == 7:
-        month_written = 'July'
+        month = 'July'
     elif month == 8:
-        month_written = 'August'
+        month = 'August'
     elif month == 9:
-        month_written = 'September'
+        month = 'September'
     elif month == 10:
-        month_written = 'October'
+        month = 'October'
     elif month == 11:
-        month_written = 'November'
+        month = 'November'
     elif month == 12:
-        month_written = 'December'
+        month = 'December'
         
     if minute == 1:
         minute_written = 'minute'
@@ -65,7 +65,7 @@ def date_time(time):
     else:
         hour_written = 'hours'
 
-    date_string = f"{day} {month_written} {year} year {hour} {hour_written} {minute} {minute_written}"
+    date_string = f"{day} {month} {year} year {hour} {hour_written} {minute} {minute_written}"
     return date_string
     
     
