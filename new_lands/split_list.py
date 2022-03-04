@@ -14,8 +14,8 @@ If it has no elements, then two empty arrays should be returned.
 >>> split_list([])
 ([], [])
 
-
 """
+
 
 def split_list(items):
 
