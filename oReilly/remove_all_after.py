@@ -34,10 +34,8 @@ def remove_all_after(items, border):
         for i in range(len(items) - 1):
             if items[i] == border:
                 updated_list = items[:i + 1]
-                
                 if items[i] in items[i::]:
                     break
-                
         print(updated_list)
     else:
         print(items)
