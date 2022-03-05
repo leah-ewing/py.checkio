@@ -33,11 +33,11 @@ def remove_all_after(items, border):
     if border in items:
         for i in range(len(items) - 1):
             if items[i] == border:
+                updated_list = items[:i + 1]
+                
                 if items[i] in items[i::]:
-                    updated_list = items[:i + 1]
                     break
-                else:
-                    updated_list = items[:i + 1]
+                
         print(updated_list)
     else:
         print(items)
