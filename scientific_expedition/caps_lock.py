@@ -65,7 +65,6 @@ def caps_lock(text):
     if len(index_ranges[-1]) == 1:
 
         if len(index_ranges) == 1:
-            # print('test3')
             only_a = index_ranges[0][0]
 
             if text_list[only_a] == ' ':
@@ -150,12 +149,6 @@ def caps_lock(text):
 
     text_list = "".join(text_list)
     print(text_list)
-
-
-# caps_lock("thank you") # == thNK YOU
-# caps_lock("Why are you asking me that?")
-# caps_lock("Madder than Mad Brian of Madcastle")
-# caps_lock("Aloha from Hawaii")
 
 
 
