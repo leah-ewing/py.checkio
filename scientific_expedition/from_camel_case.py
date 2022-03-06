@@ -48,7 +48,6 @@ def from_camel_case(name):
 
     return new_list
     
-    
 
 
 if __name__ == "__main__":
