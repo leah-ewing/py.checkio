@@ -2,9 +2,12 @@
 
 Sort a list by absolute value in ascending order.
 
-Input: A list
 
-Output: The list
+Precondition: The numbers in the array are unique by their absolute values.
+
+Input: A list
+Output: A list
+
 
 >>> absolute_sort([-20, -5, 10, 15])
 [-5, 10, 15, -20]
@@ -16,6 +19,7 @@ Output: The list
 [0, -1, -2, -3]
  
 """
+
 
 def absolute_sort(values):
     
@@ -35,6 +39,7 @@ def absolute_sort(values):
                 new_list.append(pair[0])
 
     print(new_list)
+    
 
     
 if __name__ == "__main__":
