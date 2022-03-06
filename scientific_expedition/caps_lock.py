@@ -25,6 +25,9 @@ MDDER THn MD BRIn of MDCstle
 >>> caps_lock("Aloha from Hawaii")
 Aloh FROM HwII
 
+>>> caps_lock("thank you")
+thNK YOU
+
 """
 
 def caps_lock(text):
@@ -60,49 +63,66 @@ def caps_lock(text):
         index_ranges.append([indexes[-1]])
 
     if len(index_ranges[-1]) == 1:
-        i = 0
-        while i < len(index_ranges) - 1:
 
-            first_a = index_ranges[i][0]
-            second_a = index_ranges[i][1]
+        if len(index_ranges) == 1:
+            # print('test3')
+            only_a = index_ranges[0][0]
 
-            if text_list[first_a] == ' ':
-                first_a + 1
-                next_letter = first_a + 1
+            if text_list[only_a] == ' ':
+                only_a = only_a + 1
 
-                if text_list[next_letter] in lowercase:
-                    for j in range(first_a, second_a):
-                        text_list[j] = text_list[j].upper()
-
+            if text_list[only_a] in lowercase:
+                for j in range(only_a, len(text_list)):
+                    text_list[j] = text_list[j].upper()
             else:
-                if text_list[first_a] in lowercase:
-                    for j in range(first_a, second_a):
-                        text_list[j] = text_list[j].upper()
+                for j in range(only_a, len(text_list)):
+                    text_list[j] = text_list[j].lower()
+
+
+        else:
+            i = 0
+            while i < len(index_ranges) - 1:
+
+                first_a = index_ranges[i][0]
+                second_a = index_ranges[i][1]
+
+                if text_list[first_a] == ' ':
+                    first_a += 1
+                    next_letter = first_a + 1
+
+                    if text_list[next_letter] in lowercase:
+                        for j in range(first_a, second_a):
+                            text_list[j] = text_list[j].upper()
+
                 else:
-                    for j in range(first_a, second_a):
-                        text_list[j] = text_list[j].lower()
+                    if text_list[first_a] in lowercase:
+                        for j in range(first_a, second_a):
+                            text_list[j] = text_list[j].upper()
+                    else:
+                        for j in range(first_a, second_a):
+                            text_list[j] = text_list[j].lower()
 
-            last_a = index_ranges[-1][0]
+                last_a = index_ranges[-1][0]
 
-            if text_list[last_a] == ' ':
-                next_letter2 = last_a + 1
+                if text_list[last_a] == ' ':
+                    next_letter2 = last_a + 1
 
-                if text_list[next_letter] in lowercase:
-                    for j in range(last_a, len(text_list)):
-                        text_list[j] = text_list[j].upper()
+                    if text_list[next_letter] in lowercase:
+                        for j in range(last_a, len(text_list)):
+                            text_list[j] = text_list[j].upper()
+                    else:
+                        for j in range(last_a, len(text_list)):
+                            text_list[j] = text_list[j].lower()
+                
                 else:
-                    for j in range(last_a, len(text_list)):
-                        text_list[j] = text_list[j].lower()
-            
-            else:
-                if text_list[last_a] in lowercase:
-                    for j in range(last_a, len(text_list)):
-                        text_list[j] = text_list[j].upper()
-                else:
-                    for j in range(last_a, len(text_list)):
-                        text_list[j] = text_list[j].lower()
+                    if text_list[last_a] in lowercase:
+                        for j in range(last_a, len(text_list)):
+                            text_list[j] = text_list[j].upper()
+                    else:
+                        for j in range(last_a, len(text_list)):
+                            text_list[j] = text_list[j].lower()
 
-            i += 1
+                i += 1
 
     else:
         i = 0
@@ -131,7 +151,13 @@ def caps_lock(text):
     text_list = "".join(text_list)
     print(text_list)
 
-    
+
+# caps_lock("thank you") # == thNK YOU
+# caps_lock("Why are you asking me that?")
+# caps_lock("Madder than Mad Brian of Madcastle")
+# caps_lock("Aloha from Hawaii")
+
+
 
 if __name__ == "__main__":
     import doctest
