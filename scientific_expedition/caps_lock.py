@@ -32,13 +32,13 @@ thNK YOU
 
 def caps_lock(text):
 
-    indexes = []
     lowercase = 'abcdefghijklmnopqrstuvwxyz'
 
     text_list = []
     for letter in text:
         text_list.append(letter)
 
+    indexes = []
     for i in range(len(text_list)):
         if text_list[i] == 'a':
             indexes.append(i)
@@ -76,7 +76,6 @@ def caps_lock(text):
             else:
                 for j in range(only_a, len(text_list)):
                     text_list[j] = text_list[j].lower()
-
 
         else:
             i = 0

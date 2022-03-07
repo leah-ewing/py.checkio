@@ -6,7 +6,6 @@ where the first char of every word is in uppercase and all words are concatenate
 Input: A string.
 Output: The same string, but in CamelCase.
 
-Example:
 
 >>> to_camel_case("my_function_name")
 MyFunctionName
