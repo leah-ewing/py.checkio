@@ -25,6 +25,7 @@ False
 
 """
 
+
 def is_acceptable_password(password):
     digits = '1234567890'
     answer = False
@@ -39,13 +40,7 @@ def is_acceptable_password(password):
 
 
 
-is_acceptable_password('short') # == False
-is_acceptable_password('muchlonger') # == False
-is_acceptable_password('ashort') # == False
-is_acceptable_password('muchlonger5') # == True
-is_acceptable_password('sh5') # == False
-
-# if __name__ == "__main__":
-#     import doctest
-#     if doctest.testmod().failed == 0:
-#         print("\n🥳 ALL TESTS PASSED! YAY!\n")
+if __name__ == "__main__":
+    import doctest
+    if doctest.testmod().failed == 0:
+        print("\n🥳 ALL TESTS PASSED! YAY!\n")
