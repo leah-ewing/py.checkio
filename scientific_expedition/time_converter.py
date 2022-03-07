@@ -35,9 +35,9 @@ def time_converter(time):
             hour = hour - 12
     
     else:
+        am_pm = 'a.m.'
         if hour == 0:
             hour = 12
-        am_pm = 'a.m.'
 
     time = (f"{hour}:{minute} {am_pm}")
     print(time)
