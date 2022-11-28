@@ -18,13 +18,13 @@ ohho
 
 def backward_string(val):
 
-    answer = str(val[::-1])
+    val = str(val[::-1])
     
-    print(answer)
+    print(val)
 
 
 
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
-        print('\n🥳 ALL TESTS PASSED! YAY!\n')
+        print('\n ALL TESTS PASSED! YAY!\n')

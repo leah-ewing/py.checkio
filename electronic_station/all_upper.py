@@ -19,6 +19,9 @@ False
 >>> is_all_upper('')
 False
 
+>>> is_all_upper("     ")
+False
+
 """
 
 
@@ -26,18 +29,26 @@ def is_all_upper(text):
 
     uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     upper_letters = []
+    answer = ''
 
     if len(text) > 0:
         for letter in text:
             if letter in uppercase or letter == ' ':
                 upper_letters.append(letter)
+            for letter in upper_letters:
+                if letter in uppercase:
+                    answer = True # *******
+                else:
+                    answer = False
         
         if len(upper_letters) == len(text):
-            print(True)
+            answer = True
         else:
-            print(False)
+            answer = False
     else:
-        print(False)
+        answer = False
+
+    print(answer)
 
 
 
